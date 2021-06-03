@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "mathinjection85fd3193": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

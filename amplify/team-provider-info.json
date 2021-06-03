@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mathinjection-dev-153515-authRole",
+      "UnauthRoleArn": "arn:aws:iam::839951979328:role/amplify-mathinjection-dev-153515-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::839951979328:role/amplify-mathinjection-dev-153515-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-mathinjection-dev-153515-deployment",
+      "UnauthRoleName": "amplify-mathinjection-dev-153515-unauthRole",
+      "StackName": "amplify-mathinjection-dev-153515",
+      "StackId": "arn:aws:cloudformation:eu-west-2:839951979328:stack/amplify-mathinjection-dev-153515/28c19430-c468-11eb-b122-0a32b2c49c14",
+      "AmplifyAppId": "d28v491oqskw4b"
+    },
+    "categories": {
+      "auth": {
+        "mathinjection85fd3193": {}
+      }
+    }
+  }
+}
