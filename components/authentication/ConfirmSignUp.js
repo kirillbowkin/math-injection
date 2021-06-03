@@ -10,13 +10,13 @@ function ConfirmSignUp({ setUiState, onChange, confirmSignUp }) {
       </div>
       <button
         onClick={() => confirmSignUp()}
-        className="text-white w-full mt-4 bg-pink-600 p-3 rounded"
+        className="text-white w-full mt-4 bg-blue-600 p-3 rounded"
       >
         Continue
       </button>
       <button
         onClick={() => setUiState("signIn")}
-        className="text-sm mt-6 text-pink-500"
+        className="text-sm mt-6 text-blue-500"
       >
         Cancel
       </button>
