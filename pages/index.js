@@ -2,44 +2,35 @@ import Head from "next/head";
 import sanityClient from "../client";
 import Link from "next/link";
 import dayjs from "dayjs";
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-export async function getStaticProps(context) {
-  const data = await sanityClient.fetch(
-    `
-    *[_type == "post"] {
-      title,
-      author,
-      slug,
-    _createdAt,
-      mainImage{
-          asset->{
-          _id,
-          url,
-        }
-    }
-}
-    `
-  );
-  return {
-    props: {
-      posts: data,
-    },
-    revalidate: true,
-    // will be passed to the page component as props
-  };
-}
-{
-  /* <div className="my-2 cursor-pointer float-left">
-  <img
-    src={post.mainImage.asset.url}
-    alt=""
-  />
-  <h2>{post.title}</h2>
-</div> */
-}
+export default function Home() {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    getPosts();
+  }, []);
 
-export default function Home({ posts }) {
+  async function getPosts() {
+    const data = await sanityClient.fetch(
+      `
+          *[_type == "post"] {
+            title,
+            author,
+            slug,
+          _createdAt,
+            mainImage{
+                asset->{
+                _id,
+                url,
+              }
+          }
+      }
+          `
+    );
+
+    setPosts(data);
+  }
+
   return (
     <div>
       Home Page
